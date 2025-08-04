@@ -1,11 +1,16 @@
-<script setup></script>
+<script setup>
+import MainWrapper from "@/components/MainWrapper.vue";
+
+const themeOverrides = {
+    common: {
+        fontFamily: '"Manrope", sans-serif',
+    }
+};
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+    <NConfigProvider :theme-overrides="themeOverrides">
+        <NGlobalStyle />
+        <MainWrapper />
+    </NConfigProvider>
 </template>
-
-<style scoped></style>
