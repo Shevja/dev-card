@@ -1,2 +1,16 @@
 @import "tailwindcss";
 @import './fonts.css';
+
+@theme {
+    --breakpoint-xs: 30rem;
+}
+
+.bg-stripes {
+    background-image: repeating-linear-gradient(
+            -45deg,
+            currentColor,
+            currentColor 1px,
+            transparent 2px,
+            transparent 6px
+    );
+}
